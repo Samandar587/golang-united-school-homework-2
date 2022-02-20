@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"math"
 )
 
@@ -19,7 +20,7 @@ func CalcSquare(sideLen float64, sidesNum num) float64 {
 	case 3:
 		return (math.Sqrt(3) / 4) * math.Pow(sideLen, 2)
 	case 4:
-		return sideLen * sideLen
+		return math.Pow(sideLen, 2)
 	case 0:
 		return math.Pi * math.Pow(sideLen, 2)
 	default:
@@ -34,8 +35,8 @@ func main() {
 		SidesSquare   = 4
 		SidesCircle   = 0
 	)
-	CalcSquare(10.0, SidesTriangle)
-	CalcSquare(10.0, SidesSquare)
-	CalcSquare(10.0, SidesCircle)
+	fmt.Println(CalcSquare(10.0, SidesTriangle))
+	fmt.Println(CalcSquare(10.0, SidesSquare))
+	fmt.Println(CalcSquare(10.0, SidesCircle))
 
 }
