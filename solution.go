@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"math"
 )
 
@@ -35,8 +34,8 @@ func main() {
 		SidesSquare   = 4
 		SidesCircle   = 0
 	)
-	fmt.Println(CalcSquare(2.0, SidesTriangle))
-	fmt.Println(CalcSquare(10.0, SidesSquare))
-	fmt.Println(CalcSquare(2.0, SidesCircle))
+	CalcSquare(10.0, SidesTriangle)
+	CalcSquare(10.0, SidesSquare)
+	CalcSquare(10.0, SidesCircle)
 
 }
