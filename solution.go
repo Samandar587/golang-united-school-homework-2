@@ -18,7 +18,7 @@ func CalcSquare(sideLen float64, sidesNum num) float64 {
 
 	switch sidesNum {
 	case 3:
-		return (math.Sqrt(3) / 4) * math.Max(sideLen, 2)
+		return (math.Sqrt(3) / 4) * math.Pow(sideLen, 2)
 	case 4:
 		return sideLen * sideLen
 	case 0:
@@ -35,8 +35,8 @@ func main() {
 		SidesSquare   = 4
 		SidesCircle   = 0
 	)
-	fmt.Println(CalcSquare(10.0, SidesTriangle))
+	fmt.Println(CalcSquare(2.0, SidesTriangle))
 	fmt.Println(CalcSquare(10.0, SidesSquare))
-	fmt.Println(CalcSquare(10.0, SidesCircle))
+	fmt.Println(CalcSquare(2.0, SidesCircle))
 
 }
