@@ -12,8 +12,9 @@ import (
 // CalcSquare(10.0, SidesTriangle)
 // CalcSquare(10.0, SidesSquare)
 // CalcSquare(10.0, SidesCircle)
+type num int
 
-func CalcSquare(sideLen float64, sidesNum uint) float64 {
+func CalcSquare(sideLen float64, sidesNum num) float64 {
 
 	switch sidesNum {
 	case 3:
