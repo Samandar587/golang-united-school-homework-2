@@ -1,7 +1,6 @@
-package main
+package solution
 
 import (
-	"fmt"
 	"math"
 )
 
@@ -14,29 +13,23 @@ import (
 // CalcSquare(10.0, SidesCircle)
 type num int
 
+const (
+	SidesTriangle = 3
+	SidesSquare   = 4
+	SidesCircle   = 0
+)
+
 func CalcSquare(sideLen float64, sidesNum num) float64 {
 
 	switch sidesNum {
-	case 3:
+	case SidesTriangle:
 		return (math.Sqrt(3) / 4) * math.Pow(sideLen, 2)
-	case 4:
+	case SidesSquare:
 		return math.Pow(sideLen, 2)
-	case 0:
+	case SidesCircle:
 		return math.Pi * math.Pow(sideLen, 2)
 	default:
 		return 0
 
 	}
-}
-
-func main() {
-	const (
-		SidesTriangle = 3
-		SidesSquare   = 4
-		SidesCircle   = 0
-	)
-	fmt.Println(CalcSquare(10.0, SidesTriangle))
-	fmt.Println(CalcSquare(10.0, SidesSquare))
-	fmt.Println(CalcSquare(10.0, SidesCircle))
-
 }
